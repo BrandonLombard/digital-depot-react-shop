@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Cybrosphere Omni",
+        "price": 459.99,
+        "imgUrl": "/images/Cybrosphere-Omni.png"
+    },
+    {
+        "id": 2,
+        "name": "QuantumWorks Prism",
+        "price": 679.99,
+        "imgUrl": "/images/QuantumWorks-Prism.png"
+    },
+    {
+        "id": 3,
+        "name": "NexaTech Hyperion",
+        "price": 349.99,
+        "imgUrl": "/images/NexaTech-Hyperion.png"
+    },
+    {
+        "id": 4,
+        "name": "Zenith Apex",
+        "price": 529.99,
+        "imgUrl": "/images/Zenith-Apex.png"
+    }
+]
