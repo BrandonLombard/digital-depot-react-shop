@@ -1,12 +1,17 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
+import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/shoppingCartContext";
+import logo from "/images/logo.png";
 
 export function Navbar() {
     const { openCart, cartQuantity } = useShoppingCart()
     return (
         <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
             <Container>
+                <img src={logo} className="logo"></img>
+                <div className="logo-name">
+                    Digital Depot
+                    </div> | 
                 <Nav className="me-auto">
                     <Nav.Link to="/" as={NavLink}>
                         Home
@@ -17,13 +22,16 @@ export function Navbar() {
                     <Nav.Link to="/about" as={NavLink}>
                         About
                     </Nav.Link>
+                    
                 </Nav>
-                {cartQuantity > 0 && (<Button 
+                <input type="text" className="form-control" id="search-box"></input>
+                <Button 
                 onClick={openCart}
                 style={{ width: "3rem", height: "3rem", position: "relative"}}
                 variant="outline-primary"
                 className="rounded-circle"
                 >
+                {cartQuantity > 0 && (
                 <div className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
                 style={{
                     color: "white",
@@ -35,9 +43,9 @@ export function Navbar() {
                     transform: "translate(25%, 25%)",
                 }}>
                     {cartQuantity}
-                </div>
+                </div>)}
                 
-                </Button>)}
+                </Button>
             </Container>
             
         </NavbarBs>

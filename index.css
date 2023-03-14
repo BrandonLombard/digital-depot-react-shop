@@ -1,0 +1,48 @@
+.logo {
+    height: 45px;
+}
+
+a.nav-link {
+    color: #8d837f;
+}
+
+a.nav-link:hover {
+    color: #e7620b;
+}
+
+a.nav-link.active {
+    /* box-shadow: 0 5px 5px -6px #777; */
+    border-top: 1.25px solid lightgray;
+}
+
+.logo-name {
+    margin-left: 5px;
+    margin-right: 10px;
+    color: #3a2d28;
+}
+
+.container {
+    font-size: 19px;
+    font-weight: 350;
+}
+
+button.btn-primary {
+    background: #e7620b;
+    border: none;
+    box-shadow: 0 5px 5px -6px #777;
+}
+
+button.btn-primary:hover {
+    background: #cc5a0d;
+}
+
+#search-box {
+    width: 50%;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 775px) {
+    #search-box {
+        display: none;
+    }
+}

@@ -6,7 +6,6 @@ import { Store } from "./pages/store"
 import { About } from "./pages/about"
 import { Navbar } from "./components/navbar"
 
-import './App.css'
 import { ShoppingCartProvider } from './context/shoppingCartContext'
 
 function App() {
