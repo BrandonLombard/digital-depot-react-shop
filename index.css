@@ -3,22 +3,18 @@
 }
 
 a.nav-link {
-    color: #8d837f;
-}
-
-a.nav-link:hover {
-    color: #e7620b;
+    border-top: 1.25px solid transparent;
 }
 
 a.nav-link.active {
-    /* box-shadow: 0 5px 5px -6px #777; */
-    border-top: 1.25px solid lightgray;
+    color: #e7620b;
 }
 
 .logo-name {
     margin-left: 5px;
     margin-right: 10px;
     color: #3a2d28;
+    min-width: 110px;
 }
 
 .container {
@@ -37,12 +33,67 @@ button.btn-primary:hover {
 }
 
 #search-box {
-    width: 50%;
+    width: 40%;
     margin-right: 15px;
+    background: url('./src/images/search.png') no-repeat scroll;
+    background-size: 25px;
+    background-position: 5px;
+    padding-left: 40px;
+}
+
+/* a.nav-link.active {
+    
+} */
+
+button.rounded-circle {
+    border-color: rgb(168, 168, 168);
+    background-image: url('./src/images/shopping-cart.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+
+button.rounded-circle:hover {
+    border-color: rgb(168, 168, 168);
+    background-image: url('./src/images/shopping-cart-white.png');
+    background-color: #e7620b;  /* #e7620b */
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 8px;
+    transition: 1s;
+}
+
+
+button.rounded-circle:active {
+    background: #cc5a0d;
 }
 
 @media screen and (max-width: 775px) {
     #search-box {
         display: none;
     }
+}
+
+#banner {
+    width: 100%;
+    height: 300px;
+    background: url('./src/images/banner1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+
+/* Hover animation for the links */
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #e7620b;
+    transition: width .4s ease-in;
+}
+  
+a:hover::after {
+    width: 100%;
 }
