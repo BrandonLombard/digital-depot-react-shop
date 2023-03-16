@@ -1,13 +1,6 @@
+/* Styling for the Digital Depot logo */
 .logo {
     height: 45px;
-}
-
-a.nav-link {
-    border-top: 1.25px solid transparent;
-}
-
-a.nav-link.active {
-    color: #e7620b;
 }
 
 .logo-name {
@@ -17,11 +10,22 @@ a.nav-link.active {
     min-width: 110px;
 }
 
+/* Navigation links styling */
+a.nav-link {
+    border-top: 1.25px solid transparent;
+}
+
+a.nav-link.active {
+    color: #e7620b;
+}
+
+/* Container for the site */
 .container {
     font-size: 19px;
     font-weight: 350;
 }
 
+/* Shop button styling */
 button.btn-primary {
     background: #e7620b;
     border: none;
@@ -32,6 +36,7 @@ button.btn-primary:hover {
     background: #cc5a0d;
 }
 
+/*  Search box styling */
 #search-box {
     width: 40%;
     margin-right: 15px;
@@ -41,10 +46,7 @@ button.btn-primary:hover {
     padding-left: 40px;
 }
 
-/* a.nav-link.active {
-    
-} */
-
+/* Styling for the cart button */
 button.rounded-circle {
     border-color: rgb(168, 168, 168);
     background-image: url('./src/images/shopping-cart.png');
@@ -55,34 +57,59 @@ button.rounded-circle {
 
 button.rounded-circle:hover {
     border-color: rgb(168, 168, 168);
-    background-image: url('./src/images/shopping-cart-white.png');
-    background-color: #e7620b;  /* #e7620b */
+    background-color: transparent;
+    background-image: url('./src/images/shopping-cart-orange.png');
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: 8px;
     transition: 1s;
 }
 
-
 button.rounded-circle:active {
     background: #cc5a0d;
 }
 
+/* Styling for mobile screens */
 @media screen and (max-width: 775px) {
     #search-box {
         display: none;
     }
+    .slideshowButtons {
+        display: none;
+    }
 }
 
+/* Styling for the banner */
 #banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: 300px;
-    background: url('./src/images/banner1.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
 }
 
+#banner-image {
+    width: 100%;
+    background: url('./src/images/banner1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.banner-button {
+    cursor: pointer;
+}
+
+/* Styles the buttons for the slideshow */
+.slideshowButtons {
+    width: 25px;
+    height: 25px;
+    z-index: 2;
+    flex-shrink: 3;
+}
+
+.slideshowButtons:hover {
+    cursor: pointer;
+}
 
 /* Hover animation for the links */
 a::after {
@@ -97,3 +124,4 @@ a::after {
 a:hover::after {
     width: 100%;
 }
+

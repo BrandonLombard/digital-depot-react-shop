@@ -1,13 +1,10 @@
 export function Home() {
     return (
-    <>
-        <h1>Home</h1>
-        <div id="banner">
-            
-        </div>
-    </>
-
-    
-
+        <>
+            <div id="banner">
+                <img src="../src/images/banner1.png" id="banner-image"></img>
+                <div id="banner-buttons">q</div>
+            </div>
+        </>
     )
 }
