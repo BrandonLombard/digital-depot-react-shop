@@ -23,7 +23,7 @@ function updateBanner() {
                 bannerNum = 1;
         } 
         console.log(bannerNum);
-        $('#banner-image').attr('src', `../src/images/banner${bannerNum}.png`);
+        $('#banner-image').attr('src', `../public/images/banner${bannerNum}.png`);
         bannerNum += 1;
         setTimeout(fadeSlide, 4500, 'out')
         setTimeout(fadeSlide, 5000, 'in')
