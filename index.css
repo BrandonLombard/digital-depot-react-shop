@@ -4,7 +4,7 @@
 }
 
 .logo-name {
-    margin-left: 5px;
+    margin-left: 8px;
     margin-right: 10px;
     color: #3a2d28;
     min-width: 110px;
@@ -85,7 +85,7 @@ button.rounded-circle:active {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    height: 300px;
+    height: 50%;
 }
 
 #banner-image {
@@ -95,20 +95,30 @@ button.rounded-circle:active {
     background-repeat: no-repeat;
 }
 
-.banner-button {
-    cursor: pointer;
-}
-
 /* Styles the buttons for the slideshow */
-.slideshowButtons {
-    width: 25px;
-    height: 25px;
-    z-index: 2;
-    flex-shrink: 3;
+.banner-button {
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #2c3038;
+    opacity: 90%;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    
 }
 
-.slideshowButtons:hover {
-    cursor: pointer;
+.banner-button:hover {
+    background-color: #ff6a06;
+    transition: 0.5s;
+}
+
+#banner-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px;
 }
 
 /* Hover animation for the links */
@@ -123,5 +133,221 @@ a::after {
   
 a:hover::after {
     width: 100%;
+}
+
+/* Style the services section */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 350px;
+    height: 600px;
+    background: rgb(54, 54, 54);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 15px;
+}
+
+.service-item-image {
+    width: 100%;
+    height: 225px;
+}
+
+.services-content {
+    padding-top: 10px;
+    text-align: center;
+    background-color:  white;
+}
+
+/* Adds a ribbon effect to the title of each services box */
+.services-title {
+    font-size: 30px;
+    --f: 10px; /* control the folded part*/
+    --r: 20px; /* control the ribbon shape */
+    --t: 15px; /* the top offset */
+  
+    inset: var(--t) calc(-1*var(--f)) auto auto;
+    padding: 0 10px var(--f) calc(10px + var(--r));
+    clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2));
+    background: #e7620b;  /* #e7620b | #2c3038 */
+    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+    margin-left: 15px;
+    margin-right: -10px;
+    margin-top: 15px;
+    height: 65px;
+    padding-top: 5px;
+    color: white;
+}
+
+.services-text {
+    font-size: 19px;
+    padding: 15px;
+    padding-top: 0;
+    text-align: left;
+    color: rgb(54, 54, 54);
+    width: 90%;
+    height: 250px;
+    margin: auto;
+}
+
+#testimonials {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 15px;
+    margin-top: 25px;
+    background: rgb(34, 34, 34);
+}
+
+.shadow-effect {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border:1px solid #ECECEC;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+}
+
+#customers-testimonials .shadow-effect p {
+    font-family: inherit;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 17px 0;
+    font-weight: 300;
+}
+
+.testimonial-name {
+    margin: -17px auto 0;
+    display: table;
+    width: auto;
+    background: #3190E7;
+    padding: 9px 35px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+}
+
+#customers-testimonials .item {
+    text-align: center;
+    padding: 50px;
+    margin-bottom:80px;
+    opacity: .2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1.0, 1.0, 1);
+    transform: scale3d(1.0, 1.0, 1);
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 90px;
+    margin: 0 auto 17px;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #3190E7;
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+
+#customers-testimonials.owl-carousel .owl-dots{
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot{
+display: inline-block;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+    background: #3190E7;
+    display: inline-block;
+    height: 20px;
+    margin: 0 2px 5px;
+    transform: translate3d(0px, -50%, 0px) scale(0.3);
+    transform-origin: 50% 50% 0;
+    transition: all 250ms ease-out 0s;
+    width: 20px;
+}
+
+.separator {
+    border-top: 1px solid lightgray;
+    margin-top: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+#footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    padding: 10px;
+    width: 300px;
+}
+
+.footer-links {
+    padding: 15px;
+}
+
+.footer-links > a {
+    text-decoration: none;
+}
+
+.footer-links > a:hover::after {
+    text-decoration: none;
+    background: none;
+    width: 0%;
+}
+
+.footer-links > img {
+    margin-bottom: 10px;
+}
+
+.footer-nav-links {
+    /* margin-left: 35px; */
+    width: 75px;
+}
+
+.footer-nav-links > a {
+    text-decoration: none;
+}
+
+.footer-nav-links > a:hover::after {
+    text-decoration: none;
+    background: none;
+    width: 0%;
+}
+
+.footer-social {
+    height: 20px;
+    margin-right: 8px;
+    padding-bottom: 2px;
+}
+
+.footer-title {
+    padding-bottom: 25px;
+}
+
+.sm-text {
+    font-size: 18px;
+}
+
+.social-icon {
+
 }
 

@@ -7,13 +7,23 @@ function fadeSlide(typeFade) {
         }
 }
 
-function createBannerButtons() {
+function slideshowHover(slideshowButton) {
+        slideshowButton.src = "../src/images/slideshow-button-hover.png";
+        slideshowButton.style.transition = "0.5s";
+}
+
+function createBannerButtons(bannerNum) {
+        bannerNum = bannerNum - 1;
         clearInterval(updateSlide);
         updateSlide = setInterval(updateBanner, 5000);
         $('#banner-buttons').empty()
         for (var i = 0; i < maxLength; i++) {
-                $('#banner-buttons').append(`<span id='bannerBtn${i}' class="banner-button">🟠</span>`) 
+                $('#banner-buttons').append(`<div id='bannerBtn${i}' class="banner-button"></div>`) 
                 $(`#bannerBtn${i}`).click(updateBanner);
+                if (bannerNum == i) {
+                        $(`#bannerBtn${i}`).css("background-color", "#2c3038");
+                        // $(`#bannerBtn${i}`).animate({"background-color": "#e7620b"}, 800);
+                }
         }
         
 }
@@ -23,11 +33,13 @@ function updateBanner() {
                 bannerNum = 1;
         } 
         console.log(bannerNum);
-        $('#banner-image').attr('src', `../public/images/banner${bannerNum}.png`);
+        $('#banner-image').attr('src', `/images/banner${bannerNum}.png`);
+        
+        createBannerButtons(bannerNum);
         bannerNum += 1;
-        setTimeout(fadeSlide, 4500, 'out')
-        setTimeout(fadeSlide, 5000, 'in')
-        createBannerButtons()
+        setTimeout(fadeSlide, 4500, 'out');
+        setTimeout(fadeSlide, 5000, 'in');
+        
 }
 
 var bannerNum = 1;
