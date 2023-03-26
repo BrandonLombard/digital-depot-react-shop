@@ -56,5 +56,5 @@ function updateBannerClick(param1) {
 var bannerNum = 1;
 const maxLength = 4;
 
-// updateSlide = setInterval(updateBanner, 5000);
 updateSlide = setTimeout(updateBanner, 100, bannerNum);
+updateBanner();
