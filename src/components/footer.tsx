@@ -85,9 +85,9 @@ export class Footer extends Component {
                                 <img src="images/creator.png" className="footer-social"></img>
                                 Creator Info
                             </div>
-                            <a href="#" title="This is only an example link">Portfolio</a>
-                            <a href="#" title="This is only an example link">LinkedIn</a>
-                            <a href="#" title="This is only an example link">GitHub</a>
+                            <a href="https://www.brandonlombard.com/index.html">Portfolio</a>
+                            <a href="https://www.linkedin.com/in/brandonlombard/">LinkedIn</a>
+                            <a href="https://github.com/BrandonLombard">GitHub</a>
                         </div>
                     </div>
                 </div>

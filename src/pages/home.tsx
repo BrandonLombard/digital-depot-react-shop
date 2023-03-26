@@ -46,6 +46,7 @@ export function Home() {
                 </div>
             </div>
             <div id="testimonials">
+                <img src="images/coming-soon.png" className="coming-soon"></img>
             </div>
         </>
     )
