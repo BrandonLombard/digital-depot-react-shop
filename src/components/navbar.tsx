@@ -19,7 +19,7 @@ export function Navbar() {
                     <Nav.Link to="/store" as={NavLink}>
                         Store
                     </Nav.Link>
-                    <Nav.Link to="/about" as={NavLink}>
+                    <Nav.Link to="https://github.com/BrandonLombard/digital-depot-react-shop/blob/main/README.md#digital-depot-react-shop" as={NavLink}>
                         About
                     </Nav.Link>
                     
